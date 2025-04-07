@@ -1,0 +1,212 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.login-box {
+  background-color: #1f1f1f;
+  padding: 2.5rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+.login-box h1 {
+  color: #e50914;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #e50914;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background-color: #f40612;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+
+header h1 {
+  color: #e50914;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e50914;
+}
+
+/* Featured Section */
+.featured {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+  position: relative;
+}
+
+.featured-info {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 320px;
+}
+
+.featured-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.featured-info .btns {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.featured-info .btns button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.featured-info .btns .play-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+.featured-info .btns .info-btn {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Movie Cards Section */
+.movies-section {
+  padding: 2rem;
+}
+
+.movies-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Movie Row */
+.movie-row {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Movie Card */
+.movie-card {
+  flex: 0 0 auto;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  animation: fadeUp 0.6s ease-in-out;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover img {
+  transform: scale(1.1);
+}
+
+.movie-card p {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ddd;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
